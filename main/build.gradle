@@ -1,0 +1,22 @@
+plugins {
+	id "org.springframework.boot" version "2.5.3"
+	id "io.spring.dependency-management" version "1.0.11.RELEASE"
+}
+
+jar {
+    manifest {
+        attributes "Implementation-Title": "main",
+                   "Implementation-Version":archiveVersion
+    }
+}
+
+dependencies {	
+	implementation project(":producer")
+	implementation project(":consumer")
+
+	implementation "org.springframework.boot:spring-boot-starter-web"
+}
+
+springBoot {
+   	mainClassName = 'com.example.monolith.MonolithicApplication'
+}

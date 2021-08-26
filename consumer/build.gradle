@@ -1,0 +1,27 @@
+plugins {
+	id "org.springframework.boot" version "2.5.3"
+	id "io.spring.dependency-management" version "1.0.11.RELEASE"
+}
+
+jar {
+    manifest {
+        attributes "Implementation-Title": "consumer",
+                   "Implementation-Version":archiveVersion
+    }
+}
+
+dependencies {		
+	implementation project(":producer")
+	
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	implementation "org.requirementsascode:requirementsascodecore:2.0"
+}
+
+bootJar {
+	enabled = false
+}
+
+jar {
+  enabled = true
+}
+
