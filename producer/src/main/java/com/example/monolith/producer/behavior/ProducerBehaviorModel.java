@@ -20,7 +20,7 @@ public class ProducerBehaviorModel implements BehaviorModel {
 	
 	public static class RequestGreeting {
 		public final String userName;
-		public RequestGreeting(String userName) {
+		RequestGreeting(String userName) {
 			this.userName = userName;
 		}
 	};

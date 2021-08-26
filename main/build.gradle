@@ -13,6 +13,8 @@ jar {
 dependencies {	
 	implementation project(":producer")
 	implementation project(":consumer")
+	implementation project(":connector")
+	
 	implementation "org.requirementsascode:requirementsascodecore:2.0"
 	implementation "org.requirementsascode:eventbus-api:0.2.2-SNAPSHOT"
 	implementation "org.requirementsascode:spring-eventbus:0.2.2-SNAPSHOT"

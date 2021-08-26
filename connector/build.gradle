@@ -1,0 +1,14 @@
+jar {
+    manifest {
+        attributes "Implementation-Title": "connector",
+                   "Implementation-Version":archiveVersion
+    }
+}
+
+dependencies {	
+	implementation project(":producer")
+	implementation project(":consumer")
+	
+	implementation "org.requirementsascode:eventbus-api:0.2.2-SNAPSHOT"
+	implementation "org.requirementsascode:requirementsascodecore:2.0"
+}
