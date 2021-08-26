@@ -1,0 +1,49 @@
+plugins {
+	id "java"
+	id "org.springframework.boot" version "2.5.3"
+	id "io.spring.dependency-management" version "1.0.11.RELEASE"
+}
+
+compileJava {
+  sourceCompatibility = "8"
+  targetCompatibility = "8"
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url "https://oss.sonatype.org/content/repositories/snapshots/"
+	}
+}
+
+dependencies {	
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	
+	implementation "org.requirementsascode:requirementsascodecore:2.0"
+	implementation "org.requirementsascode:spring-behavior-eventbus:0.2.2-SNAPSHOT"
+
+	testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.1"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+}
+
+javadoc {
+    options.addBooleanOption("Xdoclint:-missing", true)
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+test {
+	useJUnitPlatform()
+}

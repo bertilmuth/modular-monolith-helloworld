@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+}
+
+plugins {
+	id "org.springframework.boot" version "2.5.3"
+	id "io.spring.dependency-management" version "1.0.11.RELEASE"
+}
+
+gradle.projectsEvaluated {
+     tasks.withType(JavaCompile) {
+         options.compilerArgs << "-parameters"
+     }
+}
+	
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-web"
+
+	implementation "org.requirementsascode:spring-behavior-eventbus:0.2.2-SNAPSHOT"
+	implementation "org.requirementsascode:requirementsascodecore:2.0"
+}
