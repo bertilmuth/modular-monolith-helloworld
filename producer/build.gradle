@@ -11,10 +11,8 @@ jar {
 }
 
 dependencies {	
-	implementation "org.springframework.boot:spring-boot-starter-web"
-	
-	implementation "org.requirementsascode:requirementsascodecore:2.0"
 	implementation "org.requirementsascode:spring-behavior-eventbus:0.2.2-SNAPSHOT"
+	implementation "org.requirementsascode:requirementsascodecore:2.0"
 }
 
 bootJar {

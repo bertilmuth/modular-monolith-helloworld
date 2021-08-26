@@ -2,15 +2,12 @@ package com.example.monolith.producer.behavior;
 
 import org.requirementsascode.BehaviorModel;
 import org.requirementsascode.Model;
-import org.requirementsascode.spring.behavior.eventbus.EventBus;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.requirementsascode.spring.eventbus.EventBus;
 
-@Primary @Configuration
 public class ProducerBehaviorModel implements BehaviorModel {
 	private final EventBus eventBus;
 
-	ProducerBehaviorModel(EventBus eventBus) {
+	public ProducerBehaviorModel(EventBus eventBus) {
 		this.eventBus = eventBus;
 	}
 	
