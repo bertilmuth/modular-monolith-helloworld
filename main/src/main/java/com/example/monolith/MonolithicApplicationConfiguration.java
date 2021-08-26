@@ -3,7 +3,7 @@ package com.example.monolith;
 import static java.util.Collections.singleton;
 
 import org.requirementsascode.BehaviorModel;
-import org.requirementsascode.spring.eventbus.EventBus;
+import org.requirementsascode.eventbus.EventBus;
 import org.requirementsascode.spring.eventbus.EventListeners;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

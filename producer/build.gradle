@@ -11,7 +11,7 @@ jar {
 }
 
 dependencies {	
-	implementation "org.requirementsascode:spring-eventbus:0.2.2-SNAPSHOT"
+	implementation "org.requirementsascode:eventbus-api:0.2.2-SNAPSHOT"
 	implementation "org.requirementsascode:requirementsascodecore:2.0"
 }
 
