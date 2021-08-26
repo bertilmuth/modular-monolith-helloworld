@@ -1,0 +1,2 @@
+# modular-monolith-helloworld
+A hello world style example of a [producer](https://github.com/bertilmuth/modular-monolith-helloworld/blob/main/producer/src/main/java/com/example/monolith/producer/behavior/ProducerBehaviorModel.java) and [consumer](https://github.com/bertilmuth/modular-monolith-helloworld/blob/main/consumer/src/main/java/com/example/monolith/consumer/behavior/ConsumerBehaviorModel.java) communicating with an event bus.
