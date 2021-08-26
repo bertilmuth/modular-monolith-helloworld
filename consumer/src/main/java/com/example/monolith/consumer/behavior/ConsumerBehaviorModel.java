@@ -9,7 +9,7 @@ public class ConsumerBehaviorModel implements BehaviorModel {
 	@Override
 	public Model model() {
 		return Model.builder()
-			.user(GreetingRequested.class).system(this::printGreeting)
+			.on(GreetingRequested.class).system(this::printGreeting)
 			.build();
 	}
 	
