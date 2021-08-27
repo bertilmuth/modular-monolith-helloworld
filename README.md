@@ -13,3 +13,12 @@ This modular style has the following downsides:
 * It leads to *eventual consistency*. Since the modules communicate asynchronously, there is no guarantee for immediate consistency of data between modules.
 * More effort for *reliable messaging*. In a real world application, it must be made sure that no events get lost. This complicates the infrastructure logic.
 
+# Getting started
+1. Clone the project
+2. Change directory to `modular-monolith-helloworld`
+3. In one windows, run the server with `./gradlew :main:bootRun`
+4. In another window, send a POST request with:
+
+`curl -H "Content-Type: application/json" -X POST -d '{"@type": "RequestGreeting", "userName":"Sandra"} http://localhost:8080/producer` (Unix)
+
+`iwr http://localhost:8080/producer -Method 'POST' -Headers @{'Content-Type' = 'application/json'} -Body '{"@type": "RequestGreeting", "userName":"Sandra"}` (Windows)
