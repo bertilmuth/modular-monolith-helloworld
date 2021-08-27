@@ -13,6 +13,8 @@ jar {
 dependencies {	
 	implementation "org.requirementsascode:eventbus-api:0.2.2-SNAPSHOT"
 	implementation "org.requirementsascode:requirementsascodecore:2.0"
+	
+	implementation "org.springframework.boot:spring-boot-starter-web"
 }
 
 bootJar {
