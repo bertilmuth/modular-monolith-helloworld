@@ -16,7 +16,7 @@ This modular style has the following downsides:
 # Getting started
 1. Clone the project
 2. Change directory to `modular-monolith-helloworld`
-3. In one windows, run the server with `./gradlew :main:bootRun`
+3. In one window, run the server with `./gradlew :main:bootRun`
 4. In another window, send a POST request with:
 
 `curl -H "Content-Type: application/json" -X POST -d '{"@type": "RequestGreeting", "userName":"Sandra"} http://localhost:8080/producer` (Unix)
